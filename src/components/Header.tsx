@@ -1,6 +1,6 @@
 "use client"
 
-import { Github, Linkedin } from "lucide-react"
+import { Github, Linkedin, Mail, SendHorizontal } from "lucide-react"
 import { IconButton } from "./ui/button"
 import { Button } from "./ui/moving-border"
 import { GithubUrl, LinkedInUrl } from "@/constants"
@@ -16,8 +16,18 @@ import {
 } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { Textarea } from "@/components/ui/textarea"
+import { useFormState } from "react-dom"
+import { FormEvent } from "react"
 
 const ContactDialog = () => {
+
+    async function onSubmit(event: FormEvent<HTMLFormElement>) {
+        event.preventDefault()
+        const formData = new FormData(event.currentTarget)
+        console.log(formData);
+    }
+
     return (
         <Dialog>
             <DialogTrigger asChild>
@@ -27,37 +37,32 @@ const ContactDialog = () => {
                 >Hire Me!</Button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-[425px]">
-                <DialogHeader>
-                    <DialogTitle>Edit profile</DialogTitle>
-                    <DialogDescription>
-                        Make changes to your profile here. Click save when you're done.
-                    </DialogDescription>
-                </DialogHeader>
-                <div className="grid gap-4 py-4">
-                    <div className="grid grid-cols-4 items-center gap-4">
-                        <Label htmlFor="name" className="text-right">
-                            Name
-                        </Label>
-                        <Input
-                            id="name"
-                            defaultValue="Pedro Duarte"
-                            className="col-span-3"
-                        />
+                <form onSubmit={onSubmit} className="grid w-full max-w-sm items-center gap-6 py-2">
+                    <DialogHeader>
+                        <DialogTitle className="flex gap-2"><Mail className="w-4 h-4" />Send an Email</DialogTitle>
+                    </DialogHeader>
+                    <div className="grid w-full max-w-sm items-center gap-6 py-2">
+                        <div className="grid gap-2">
+                            <Label htmlFor="name">Name</Label>
+                            <Input type="text" id="name" placeholder="Your Name" />
+                        </div>
+                        <div className="grid gap-2">
+                            <Label htmlFor="email">Email</Label>
+                            <Input type="email" id="email" placeholder="Your Email" />
+                        </div>
+                        <div className="grid gap-2">
+                            <Label htmlFor="subject">Subject</Label>
+                            <Input type="text" id="subject" placeholder="Subject" />
+                        </div>
+                        <div className="grid gap-2">
+                            <Label htmlFor="message">Your message</Label>
+                            <Textarea placeholder="Type your message here." id="message" />
+                        </div>
                     </div>
-                    <div className="grid grid-cols-4 items-center gap-4">
-                        <Label htmlFor="username" className="text-right">
-                            Username
-                        </Label>
-                        <Input
-                            id="username"
-                            defaultValue="@peduarte"
-                            className="col-span-3"
-                        />
-                    </div>
-                </div>
-                <DialogFooter>
-                    <IconButton type="submit">Save changes</IconButton>
-                </DialogFooter>
+                    <DialogFooter>
+                        <IconButton type="submit">Send Mail<SendHorizontal className="w-4 h-4 ml-2" /></IconButton>
+                    </DialogFooter>
+                </form>
             </DialogContent>
         </Dialog>
     )
@@ -74,8 +79,10 @@ export const Header = () => {
                 </div>
             </div>
             <div className="flex gap-2 items-center">
-
                 <ContactDialog />
+                <IconButton variant={'outline'} asChild>
+                    <a href="/assets/samtu.pdf" target="_blank">Resume</a>
+                </IconButton>
                 <IconButton variant={'outline'} size={'icon'} asChild>
                     <a href={GithubUrl} target="_blank">
                         <Github />

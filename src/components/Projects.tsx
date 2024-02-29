@@ -24,7 +24,7 @@ const RenderProject = ({ project }: { project: ProjectType }) => {
                     <p className="text-xl font-bold">{project.title}</p>
                     <p>{project.about}</p>
                     <div className="flex flex-wrap gap-2 pt-2">
-                        {project.techStack.map(tech => <Badge className="border-zinc-600" variant={'secondary'}>{tech}</Badge>
+                        {project.techStack.map(tech => <Badge key={project.id} className="border-zinc-600" variant={'secondary'}>{tech}</Badge>
                         )}
                     </div>
 
