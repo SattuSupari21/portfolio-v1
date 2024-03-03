@@ -18,14 +18,22 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { useFormState } from "react-dom"
-import { FormEvent } from "react"
+import { FormEvent, useState } from "react"
+import { SendMail } from "@/actions"
 
 const ContactDialog = () => {
 
+    const [name, setName] = useState<string | null>(null);
+    const [email, setEmail] = useState<string | null>(null);
+    const [subject, setSubject] = useState<string | null>(null);
+    const [message, setMessage] = useState<string | null>(null);
+
     async function onSubmit(event: FormEvent<HTMLFormElement>) {
         event.preventDefault()
-        const formData = new FormData(event.currentTarget)
-        console.log(formData);
+        if (name && email && subject && message) {
+            const res = await SendMail({ name, email, subject, message })
+            console.log(res);
+        }
     }
 
     return (
@@ -37,26 +45,26 @@ const ContactDialog = () => {
                 >Hire Me!</Button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-[425px]">
-                <form onSubmit={onSubmit} className="grid w-full max-w-sm items-center gap-6 py-2">
+                <form onSubmit={(event) => onSubmit(event)} className="grid w-full max-w-sm items-center gap-6 py-2">
                     <DialogHeader>
                         <DialogTitle className="flex gap-2"><Mail className="w-4 h-4" />Send an Email</DialogTitle>
                     </DialogHeader>
                     <div className="grid w-full max-w-sm items-center gap-6 py-2">
                         <div className="grid gap-2">
                             <Label htmlFor="name">Name</Label>
-                            <Input type="text" id="name" placeholder="Your Name" />
+                            <Input type="text" id="name" placeholder="Your Name" onChange={(e) => setName(e.target.value)} />
                         </div>
                         <div className="grid gap-2">
                             <Label htmlFor="email">Email</Label>
-                            <Input type="email" id="email" placeholder="Your Email" />
+                            <Input type="email" id="email" placeholder="Your Email" onChange={(e) => setEmail(e.target.value)} />
                         </div>
                         <div className="grid gap-2">
                             <Label htmlFor="subject">Subject</Label>
-                            <Input type="text" id="subject" placeholder="Subject" />
+                            <Input type="text" id="subject" placeholder="Subject" onChange={(e) => setSubject(e.target.value)} />
                         </div>
                         <div className="grid gap-2">
                             <Label htmlFor="message">Your message</Label>
-                            <Textarea placeholder="Type your message here." id="message" />
+                            <Textarea placeholder="Type your message here." id="message" onChange={(e) => setMessage(e.target.value)} />
                         </div>
                     </div>
                     <DialogFooter>
