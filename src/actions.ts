@@ -32,7 +32,6 @@ export async function SendMail({ name, email, subject, message }: { name: string
             return { status: 'error', message: 'Error!' }
         }
         else {
-            console.log(info)
             return { status: 'success', message: 'Mail sent successfully!' }
         }
     })

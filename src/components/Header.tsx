@@ -17,9 +17,9 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { useFormState } from "react-dom"
 import { FormEvent, useState } from "react"
 import { SendMail } from "@/actions"
+import toast from "react-hot-toast"
 
 const ContactDialog = () => {
 
@@ -31,8 +31,14 @@ const ContactDialog = () => {
     async function onSubmit(event: FormEvent<HTMLFormElement>) {
         event.preventDefault()
         if (name && email && subject && message) {
-            const res = await SendMail({ name, email, subject, message })
-            console.log(res);
+            toast.promise(
+                SendMail({ name, email, subject, message }),
+                {
+                    loading: 'Sending mail...',
+                    success: <b>Mail sent!</b>,
+                    error: <b>Could not send mail.</b>,
+                }
+            );
         }
     }
 
