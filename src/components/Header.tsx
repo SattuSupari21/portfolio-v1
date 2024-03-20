@@ -86,7 +86,7 @@ export const Header = () => {
     return (
         <div className="w-full h-full flex items-center justify-between">
             <div className="py-4 flex gap-4 items-center justify-center">
-                <img src="./pic.jpeg" alt="profile picture" className="w-14 h-14 object-cover rounded-full" />
+                <img src="/images/pic.jpeg" alt="profile picture" className="w-14 h-14 object-cover rounded-full" />
                 <div>
                     <div className="font-medium">Satvik Chandra</div>
                     <div className="text-zinc-400">Student</div>

@@ -1,7 +1,12 @@
+"use client"
+
 import { ArrowRight, Github } from "lucide-react"
 import { Card } from "./ui/card"
 import { IconButton } from "./ui/button"
 import { Badge } from "@/components/ui/badge"
+import { useRouter } from "next/navigation"
+
+import { projects } from "@/constants"
 
 type ProjectType = {
     id: number,
@@ -13,8 +18,9 @@ type ProjectType = {
 }
 
 const RenderProject = ({ project }: { project: ProjectType }) => {
+    const router = useRouter();
     return (
-        <Card className="h-auto flex flex-col gap-4 p-2 hover:bg-zinc-800 hover:border-zinc-800 cursor-pointer">
+        <Card className="h-auto flex flex-col gap-4 p-2 hover:bg-zinc-800 hover:border-zinc-800 cursor-pointer" onClick={() => router.push(`/project/${project.id}`)}>
             <div className="w-full h-[240px] border">
                 <img src={project.image} alt={project.title} className="w-full h-full object-fill" />
             </div>
@@ -29,40 +35,13 @@ const RenderProject = ({ project }: { project: ProjectType }) => {
                     </div>
 
                 </div>
-                <IconButton className="ml-auto" variant={'outline'} asChild>
+                <IconButton className="ml-auto hover:bg-white hover:text-black" variant={'outline'} asChild>
                     <a href={project.sourceCode} target="_blank"><Github className="mr-2" /> Source Code </a>
                 </IconButton>
             </div>
         </Card>
     )
 }
-
-const projects = [
-    {
-        id: 1,
-        image: "limktree-home.png",
-        title: "Limktree",
-        about: "Provides users with a centralized platform to share multiple links through a single customizable URL, similar to the popular Linktree service.",
-        sourceCode: "https://github.com/SattuSupari21/limktree",
-        techStack: ["Next.js", "Prisma", "PostgreSQL", "Cloudinary", "Axios", "JWT", "Recoil", "ZOD", "Next UI", "Typescript"]
-    },
-    {
-        id: 2,
-        image: "shorty-home.png",
-        title: "Shorty",
-        about: "A simple to use URL shortner created using Elysia.js with Bun runtime and Next.js.",
-        sourceCode: "https://github.com/SattuSupari21/shorty",
-        techStack: ["Elysia.js", "Next.js", "Prisma", "PostgreSQL", "Axios", "JWT", "Recoil", "Radix UI", "Typescript"]
-    },
-    {
-        id: 3,
-        image: "styled-home.png",
-        title: "Styled",
-        about: "Full-stack e-commerce web application created using Strapi CMS and Next.js.",
-        sourceCode: "https://github.com/SattuSupari21/styled",
-        techStack: ["Strapi CMS", "Sqlite", "Next.js", "GraphQL", "Stripe", "Auth0", "Framer Motion", "Javascript"]
-    }
-];
 
 export const Projects = () => {
     return (
