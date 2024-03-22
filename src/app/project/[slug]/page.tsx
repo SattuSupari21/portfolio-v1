@@ -12,12 +12,21 @@ function ProjectDetails({ id }: { id: number }) {
         return
     }
     return (
-        <div className="w-full h-full flex flex-col gap-4 items-center">
-            <span className="text-4xl font-semibold">{project?.title}</span>
-            <div className="w-full h-full border rounded-xl p-2 hover:border-sky-400 transition">
+        <div className="w-full h-full flex flex-col gap-4">
+            <span className="text-3xl font-semibold"><span className="text-blue-200">#{project.id}. </span>{project?.title}</span>
+            <div className="w-full h-full border">
                 <img src={project.image} alt={project.title} className="w-full h-full object-fill" />
             </div>
-            <span className="text-lg text-center">{project.about}</span>
+            <div className="w-full">
+                <p className="text-xl font-semibold text-blue-200">About</p>
+                <p className="text-lg">{project.about}</p>
+            </div>
+            <div className="w-full">
+                <p className="text-xl font-semibold text-blue-200">Technology used</p>
+                <ul className="list-disc list-inside">
+                    {project.techStack.map((tech, index) => <li key={index} className="text-lg">{tech}</li>)}
+                </ul>
+            </div>
         </div>
     )
 }
