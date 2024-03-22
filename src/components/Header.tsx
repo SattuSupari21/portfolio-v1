@@ -85,18 +85,20 @@ const ContactDialog = () => {
 export const Header = () => {
     return (
         <div className="w-full h-full flex items-center justify-between">
-            <div className="py-4 flex gap-4 items-center justify-center">
-                <img src="/images/pic.jpeg" alt="profile picture" className="w-14 h-14 object-cover rounded-full" />
-                <div>
+            <div className="min-[480px]:mt-4 flex gap-4 items-center justify-center">
+                <img src="/images/crop_pic.jpeg" alt="profile picture" className="inline-block size-[60px] max-[480px]:size-[48px] rounded-full" />
+                <div className="max-[480px]:invisible">
                     <div className="font-medium">Satvik Chandra</div>
                     <div className="text-zinc-400">Student</div>
                 </div>
             </div>
             <div className="flex gap-2 items-center">
-                <ContactDialog />
-                <IconButton variant={'outline'} asChild>
-                    <a href="/assets/samtu.pdf" target="_blank">Resume</a>
-                </IconButton>
+                <div>
+                    <ContactDialog />
+                    <IconButton variant={'outline'} asChild className="max-[480px]:hidden">
+                        <a href="/assets/samtu.pdf" target="_blank">Resume</a>
+                    </IconButton>
+                </div>
                 <IconButton variant={'outline'} size={'icon'} asChild>
                     <a href={GithubUrl} target="_blank">
                         <Github />

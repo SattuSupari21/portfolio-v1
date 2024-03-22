@@ -47,7 +47,7 @@ export const Projects = () => {
     return (
         <div>
             <span className="flex items-center gap-2 text-2xl font-medium">Projects<ArrowRight /></span>
-            <div className="mt-6 grid grid-cols-2 gap-4">
+            <div className="mt-6 grid max-[480px]:grid-cols-1 grid-cols-2 gap-4">
                 {
                     projects.map(project => {
                         return <RenderProject key={project.id} project={project} />
