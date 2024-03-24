@@ -35,7 +35,7 @@ const RenderProject = ({ project }: { project: ProjectType }) => {
                     </div>
 
                 </div>
-                <IconButton className="ml-auto hover:bg-white hover:text-black" variant={'outline'} asChild>
+                <IconButton className="ml-auto hover:bg-white hover:text-black" variant={'outline'} asChild onClick={(e) => e.stopPropagation()}>
                     <a href={project.sourceCode} target="_blank"><Github className="mr-2" /> Source Code </a>
                 </IconButton>
             </div>
@@ -47,7 +47,7 @@ export const Projects = () => {
     return (
         <div>
             <span className="flex items-center gap-2 text-2xl font-medium">Projects<ArrowRight /></span>
-            <div className="mt-6 grid max-[480px]:grid-cols-1 grid-cols-2 gap-4">
+            <div className="mt-6 grid max-[500px]:grid-cols-1 grid-cols-2 gap-4">
                 {
                     projects.map(project => {
                         return <RenderProject key={project.id} project={project} />
