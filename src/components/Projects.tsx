@@ -10,6 +10,7 @@ import { projects } from "@/constants"
 
 type ProjectType = {
     id: number,
+    slug: string,
     image: string,
     title: string,
     about: string,
@@ -20,7 +21,7 @@ type ProjectType = {
 const RenderProject = ({ project }: { project: ProjectType }) => {
     const router = useRouter();
     return (
-        <Card className="h-auto flex flex-col gap-4 p-2 hover:bg-zinc-800 hover:border-zinc-800 cursor-pointer" onClick={() => router.push(`/project/${project.id}`)}>
+        <Card className="h-auto flex flex-col gap-4 p-2 hover:bg-zinc-800 hover:border-zinc-800 cursor-pointer" onClick={() => router.push(`/project/${project.slug}`)}>
             <div className="w-full h-[240px] border">
                 <img src={project.image} alt={project.title} className="w-full h-full object-fill" />
             </div>

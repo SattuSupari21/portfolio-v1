@@ -6,9 +6,9 @@ import { projects } from "@/constants"
 import { Github } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-function ProjectDetails({ id }: { id: number }) {
+function ProjectDetails({ slug }: { slug: string }) {
     const router = useRouter();
-    const project = projects.find((p) => p.id == id)
+    const project = projects.find((p) => p.slug == slug)
     if (!project) {
         router.push('/')
         return
@@ -22,7 +22,9 @@ function ProjectDetails({ id }: { id: number }) {
                 </IconButton>
             </div>
             <div className="w-full h-full border">
-                <img src={project.image} alt={project.title} className="w-full h-full object-fill" />
+                <video autoPlay controls>
+                    <source src="https://res.cloudinary.com/dpnmetc7y/video/upload/v1712301346/vmdt6cxi9ju4skuknr5y.mov" />
+                </video>
             </div>
             <div className="w-full">
                 <p className="text-xl font-semibold text-blue-200">About</p>
@@ -38,13 +40,13 @@ function ProjectDetails({ id }: { id: number }) {
     )
 }
 
-export default function Project({ params }: { params: { slug: number } }) {
+export default function Project({ params }: { params: { slug: string } }) {
     return (
         <>
             <main className="flex flex-col items-center mb-6">
                 <div className="w-full min-h-full flex flex-col gap-10 p-2 max-w-[720px]">
                     <Header />
-                    <ProjectDetails id={params.slug} />
+                    <ProjectDetails slug={params.slug} />
                 </div>
             </main>
         </>
