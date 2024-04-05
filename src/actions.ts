@@ -1,6 +1,6 @@
 "use server"
 
-export async function SendMail({ name, email, subject, message }: { name: string, email: string, subject: string, message: string }) {
+export async function SendMail({ name, email, message }: { name: string, email: string, message: string }) {
     let nodemailer = require('nodemailer')
     const transporter = nodemailer.createTransport({
         service: 'gmail',
@@ -13,7 +13,6 @@ export async function SendMail({ name, email, subject, message }: { name: string
     const mailData = {
         from: email,
         to: 'satvikchandra100@gmail.com',
-        subject: `Message From ${name}`,
         text: message + " | Sent from: " + email,
         html: `<div>${message}</div><p>Sent from:
     ${email}</p>`

@@ -34,7 +34,7 @@ export const Skills = () => {
             </Card>
             <Card className="flex flex-col gap-2 p-4">
                 <span className="text-lg font-semibold">Tools & Technologies</span>
-                <span className="text-sm font-medium">React, Next.js, Node.js, Elysia.js, Hono, Express, Flask, RESTful API, GraphQL, Tailwind CSS, shadcn/ui, FastAPI</span>
+                <span className="text-sm font-medium">React, Next.js, Node.js, Elysia.js, Hono, Express, Flask, RESTful API, GraphQL, Tailwind CSS, shadcn/ui</span>
             </Card>
             <Card className="flex flex-col gap-2 p-4">
                 <span className="text-lg font-semibold">Developer Tools</span>

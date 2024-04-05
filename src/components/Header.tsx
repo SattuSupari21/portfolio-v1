@@ -25,14 +25,13 @@ const ContactDialog = () => {
 
     const [name, setName] = useState<string | null>(null);
     const [email, setEmail] = useState<string | null>(null);
-    const [subject, setSubject] = useState<string | null>(null);
     const [message, setMessage] = useState<string | null>(null);
 
     async function onSubmit(event: FormEvent<HTMLFormElement>) {
         event.preventDefault()
-        if (name && email && subject && message) {
+        if (name && email && message) {
             toast.promise(
-                SendMail({ name, email, subject, message }),
+                SendMail({ name, email, message }),
                 {
                     loading: 'Sending mail...',
                     success: <b>Mail sent!</b>,
@@ -65,10 +64,6 @@ const ContactDialog = () => {
                             <Input type="email" id="email" placeholder="Your Email" onChange={(e) => setEmail(e.target.value)} />
                         </div>
                         <div className="grid gap-2">
-                            <Label htmlFor="subject">Subject</Label>
-                            <Input type="text" id="subject" placeholder="Subject" onChange={(e) => setSubject(e.target.value)} />
-                        </div>
-                        <div className="grid gap-2">
                             <Label htmlFor="message">Your message</Label>
                             <Textarea placeholder="Type your message here." id="message" onChange={(e) => setMessage(e.target.value)} />
                         </div>
@@ -93,7 +88,7 @@ export const Header = () => {
                 </div>
             </div>
             <div className="flex gap-2 items-center">
-                <div>
+                <div className="space-x-2">
                     <ContactDialog />
                     <IconButton variant={'outline'} asChild className="max-[480px]:hidden">
                         <a href="/assets/samtu.pdf" target="_blank">Resume</a>

@@ -1,7 +1,9 @@
 "use client"
 
 import { Header } from "@/components/Header";
+import { IconButton } from "@/components/ui/button";
 import { projects } from "@/constants"
+import { Github } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 function ProjectDetails({ id }: { id: number }) {
@@ -13,7 +15,12 @@ function ProjectDetails({ id }: { id: number }) {
     }
     return (
         <div className="w-full h-full flex flex-col gap-4">
-            <span className="text-3xl font-semibold"><span className="text-blue-200">#{project.id}. </span>{project?.title}</span>
+            <div className="w-full flex items-center justify-between">
+                <span className="text-3xl font-semibold"><span className="text-blue-200">#{project.id}. </span>{project?.title}</span>
+                <IconButton className="ml-auto hover:bg-white hover:text-black" variant={'outline'} asChild onClick={(e) => e.stopPropagation()}>
+                    <a href={project.sourceCode} target="_blank"><Github className="mr-2" /> Source Code </a>
+                </IconButton>
+            </div>
             <div className="w-full h-full border">
                 <img src={project.image} alt={project.title} className="w-full h-full object-fill" />
             </div>
