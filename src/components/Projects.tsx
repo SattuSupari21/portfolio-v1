@@ -15,7 +15,8 @@ type ProjectType = {
     title: string,
     about: string,
     sourceCode: string,
-    techStack: string[]
+    techStack: string[],
+    demoVideoUrl: string | null,
 }
 
 const RenderProject = ({ project }: { project: ProjectType }) => {

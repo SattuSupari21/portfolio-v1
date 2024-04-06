@@ -49,8 +49,8 @@ const ContactDialog = () => {
                     className="bg-white dark:bg-background text-black dark:text-white border-neutral-200 dark:border-slate-800"
                 >Hire Me!</Button>
             </DialogTrigger>
-            <DialogContent className="sm:max-w-[425px]">
-                <form onSubmit={(event) => onSubmit(event)} className="grid w-full max-w-sm items-center gap-6 py-2">
+            <DialogContent className="sm:max-w-[425px] max-[540px]:h-screen">
+                <form onSubmit={(event) => onSubmit(event)} className="grid max-[480px]:mt-auto max-[480px]:mb-auto w-full max-w-sm items-center gap-6 py-2">
                     <DialogHeader>
                         <DialogTitle className="flex gap-2"><Mail className="w-4 h-4" />Send an Email</DialogTitle>
                     </DialogHeader>

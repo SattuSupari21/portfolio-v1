@@ -22,9 +22,11 @@ function ProjectDetails({ slug }: { slug: string }) {
                 </IconButton>
             </div>
             <div className="w-full h-full border">
-                <video autoPlay controls>
-                    <source src="https://res.cloudinary.com/dpnmetc7y/video/upload/v1712301346/vmdt6cxi9ju4skuknr5y.mov" />
-                </video>
+                {
+                    project.demoVideoUrl ? <video autoPlay controls muted controlsList="nodownload" loop>
+                        <source src={project.demoVideoUrl} />
+                    </video> : <img src={project.image} />
+                }
             </div>
             <div className="w-full">
                 <p className="text-xl font-semibold text-blue-200">About</p>
