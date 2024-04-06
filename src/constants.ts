@@ -10,7 +10,7 @@ export const projects = [
         about: "Provides users with a centralized platform to share multiple links through a single customizable URL, similar to the popular Linktree service.",
         sourceCode: "https://github.com/SattuSupari21/limktree",
         techStack: ["Next.js", "Prisma", "PostgreSQL", "Cloudinary", "Axios", "JWT", "Recoil", "ZOD", "Next UI", "Typescript"],
-        demoVideoUrl: "https://res.cloudinary.com/dpnmetc7y/video/upload/v1712382858/portfoliov1-project-demos/limktree-demo.webm",
+        demoVideoUrl: "https://res.cloudinary.com/dpnmetc7y/video/upload/v1712386001/portfoliov1-project-demos/limktree-demo.mp4",
     },
     {
         id: 2,
@@ -20,7 +20,7 @@ export const projects = [
         about: "A simple to use URL shortner created using Elysia.js with Bun runtime and Next.js.",
         sourceCode: "https://github.com/SattuSupari21/shorty",
         techStack: ["Elysia.js", "Next.js", "Prisma", "PostgreSQL", "Axios", "JWT", "Recoil", "Radix UI", "Typescript"],
-        demoVideoUrl: null,
+        demoVideoUrl: "https://res.cloudinary.com/dpnmetc7y/video/upload/v1712385277/portfoliov1-project-demos/shorty-demo.mp4",
     },
     {
         id: 3,
