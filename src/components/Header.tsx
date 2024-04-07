@@ -3,7 +3,7 @@
 import { Github, Linkedin, Mail, SendHorizontal } from "lucide-react"
 import { IconButton } from "./ui/button"
 import { Button } from "./ui/moving-border"
-import { GithubUrl, LinkedInUrl } from "@/constants"
+import { GithubUrl, LinkedInUrl, profilePicture } from "@/constants"
 
 import {
     Dialog,
@@ -81,7 +81,7 @@ export const Header = () => {
     return (
         <div className="w-full h-full flex items-center justify-between">
             <div className="min-[480px]:mt-4 flex gap-4 items-center justify-center">
-                <img src="/images/crop_pic.jpeg" alt="profile picture" className="inline-block size-[60px] max-[480px]:size-[48px] rounded-full" />
+                <img src={profilePicture} alt="profile picture" className="inline-block size-[60px] max-[480px]:size-[48px] rounded-full" />
                 <div className="max-[480px]:invisible">
                     <div className="font-medium">Satvik Chandra</div>
                     <div className="text-zinc-400">Student</div>
@@ -91,7 +91,7 @@ export const Header = () => {
                 <div className="space-x-2">
                     <ContactDialog />
                     <IconButton variant={'outline'} asChild className="max-[480px]:hidden">
-                        <a href="/assets/samtu.pdf" target="_blank">Resume</a>
+                        <a href="https://drive.google.com/file/d/1XSMgp33XxLoHWVsO_HnroISQuhbjKzbk/view?usp=sharing" target="_blank">Resume</a>
                     </IconButton>
                 </div>
                 <IconButton variant={'outline'} size={'icon'} asChild>
