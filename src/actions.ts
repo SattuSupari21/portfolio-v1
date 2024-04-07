@@ -25,13 +25,17 @@ export async function SendMail({ name, email, message }: { name: string, email: 
             text: message,
         };*/
 
-    transporter.sendMail(mailData, function(err: unknown, info: unknown) {
-        if (err) {
-            console.log(err)
-            return { status: 'error', message: 'Error!' }
-        }
-        else {
-            return { status: 'success', message: 'Mail sent successfully!' }
-        }
-    })
+    await new Promise((resolve, reject) => {
+        transporter.sendMail(mailData, function(err: unknown, info: unknown) {
+            if (err) {
+                console.log(err)
+                reject(err);
+                return { status: 'error', message: 'Error!' }
+            }
+            else {
+                resolve(info)
+                return { status: 'success', message: 'Mail sent successfully!' }
+            }
+        })
+    });
 }
