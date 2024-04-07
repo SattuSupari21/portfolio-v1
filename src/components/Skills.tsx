@@ -7,7 +7,7 @@ import { BackgroundGradient } from "./ui/background-gradient"
 export const Skills = () => {
     return (
         <div className="w-full space-y-4 mt-6">
-            <span className="flex gap-2 items-center text-2xl font-medium">Skills<ArrowRight /></span>
+            <span className="flex gap-2 items-center text-xl font-medium">Skills<ArrowRight /></span>
             {/*
             <div className="w-full rounded-lg bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-1">
                 <Card className="flex flex-col gap-2 p-4">

@@ -30,7 +30,7 @@ export const projects = [
         about: "Full-stack e-commerce web application created using Strapi CMS and Next.js.",
         sourceCode: "https://github.com/SattuSupari21/styled",
         techStack: ["Strapi CMS", "Sqlite", "Next.js", "GraphQL", "Stripe", "Auth0", "Framer Motion", "Javascript"],
-        demoVideoUrl: null,
+        demoVideoUrl: "https://res.cloudinary.com/dpnmetc7y/video/upload/v1712459770/portfoliov1-project-demos/styled-demo.mp4",
     }
 ];
 
