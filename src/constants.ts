@@ -1,5 +1,7 @@
 export const profilePicture = "https://res.cloudinary.com/dpnmetc7y/image/upload/v1712460910/portfoliov1-images/profile_pic.jpg"
 
+export const resumeLink = "https://drive.google.com/file/d/1T9frXjIBnxcbdwJjUhosZUqzRIMzdDqm/view?usp=sharing"
+
 export const GithubUrl = "https://github.com/SattuSupari21";
 export const LinkedInUrl = "https://www.linkedin.com/in/satvik-chandra"
 

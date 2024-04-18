@@ -3,7 +3,7 @@
 import { Github, Linkedin, Mail, SendHorizontal } from "lucide-react"
 import { IconButton } from "./ui/button"
 import { Button } from "./ui/moving-border"
-import { GithubUrl, LinkedInUrl, profilePicture } from "@/constants"
+import { GithubUrl, LinkedInUrl, profilePicture, resumeLink } from "@/constants"
 
 import {
     Dialog,
@@ -91,7 +91,7 @@ export const Header = () => {
                 <div className="space-x-2">
                     <ContactDialog />
                     <IconButton variant={'outline'} asChild className="max-[480px]:hidden">
-                        <a href="https://drive.google.com/file/d/1XSMgp33XxLoHWVsO_HnroISQuhbjKzbk/view?usp=sharing" target="_blank">Resume</a>
+                        <a href={resumeLink} target="_blank">Resume</a>
                     </IconButton>
                 </div>
                 <IconButton variant={'outline'} size={'icon'} asChild>
