@@ -1,6 +1,6 @@
 "use client"
 
-import { ArrowRight, Github } from "lucide-react"
+import { ArrowRight, ArrowUpRight, Github } from "lucide-react"
 import { Card } from "./ui/card"
 import { IconButton } from "./ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -22,7 +22,7 @@ type ProjectType = {
 const RenderProject = ({ project }: { project: ProjectType }) => {
     const router = useRouter();
     return (
-        <Card className="h-auto flex flex-col gap-4 p-2 hover:bg-zinc-800 hover:border-zinc-800 cursor-pointer" onClick={() => router.push(`/project/${project.slug}`)}>
+        <Card className="group h-auto flex flex-col gap-4 p-2 hover:bg-zinc-800 hover:border-zinc-800 cursor-pointer" onClick={() => router.push(`/project/${project.slug}`)}>
             <div className="w-full h-[240px] border">
                 <img src={project.image} alt={project.title} className="w-full h-full object-fill" />
             </div>
@@ -37,9 +37,12 @@ const RenderProject = ({ project }: { project: ProjectType }) => {
                     </div>
 
                 </div>
-                <IconButton className="ml-auto hover:bg-white hover:text-black" variant={'outline'} asChild onClick={(e) => e.stopPropagation()}>
-                    <a href={project.sourceCode} target="_blank"><Github className="mr-2" /> Source Code </a>
-                </IconButton>
+                <div className="flex items-center justify-between">
+                    <IconButton className="hover:bg-white hover:text-black" variant={'outline'} asChild onClick={(e) => e.stopPropagation()}>
+                        <a href={project.sourceCode} target="_blank"><Github className="mr-2" /> Source Code </a>
+                    </IconButton>
+                    <ArrowRight className="group-hover:-rotate-45 transition-transform" />
+                </div>
             </div>
         </Card>
     )
