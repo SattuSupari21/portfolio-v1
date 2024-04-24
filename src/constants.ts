@@ -18,6 +18,16 @@ export const projects = [
     },
     {
         id: 2,
+        slug: 'portfolio-v1',
+        image: "https://res.cloudinary.com/dpnmetc7y/image/upload/v1713968155/portfoliov1-images/portfolio-v1-home.png",
+        title: "Portfolio Website",
+        about: "My personal portfolio website created using Next.js and deployed on Vercel.",
+        sourceCode: "https://github.com/SattuSupari21/portfolio-v1",
+        techStack: ["Next.js", "Bun", "Nodemailer", "Typescript", "Tailwind CSS", "Vercel", "React Hot Toast"],
+        demoVideoUrl: null,
+    },
+    {
+        id: 3,
         slug: 'limktree',
         image: "https://res.cloudinary.com/dpnmetc7y/image/upload/v1712460941/portfoliov1-images/limktree-home.png",
         title: "Limktree",
@@ -27,7 +37,7 @@ export const projects = [
         demoVideoUrl: "https://res.cloudinary.com/dpnmetc7y/video/upload/v1712386001/portfoliov1-project-demos/limktree-demo.mp4",
     },
     {
-        id: 3,
+        id: 4,
         slug: 'shorty',
         image: "https://res.cloudinary.com/dpnmetc7y/image/upload/v1712460942/portfoliov1-images/shorty-home.png",
         title: "Shorty",
@@ -37,7 +47,7 @@ export const projects = [
         demoVideoUrl: "https://res.cloudinary.com/dpnmetc7y/video/upload/v1712385277/portfoliov1-project-demos/shorty-demo.mp4",
     },
     {
-        id: 4,
+        id: 5,
         slug: 'styled',
         image: "https://res.cloudinary.com/dpnmetc7y/image/upload/v1712460945/portfoliov1-images/styled-home.png",
         title: "Styled",
