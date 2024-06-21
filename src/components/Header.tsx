@@ -84,7 +84,7 @@ export const Header = () => {
                 <img src={profilePicture} alt="profile picture" className="inline-block size-[60px] max-[480px]:size-[48px] rounded-full" />
                 <div className="max-[480px]:invisible">
                     <div className="font-medium">Satvik Chandra</div>
-                    <div className="text-zinc-400">Student</div>
+                    <div className="text-zinc-400">Developer</div>
                 </div>
             </div>
             <div className="flex gap-2 items-center">
