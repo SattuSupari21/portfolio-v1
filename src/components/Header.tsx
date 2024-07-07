@@ -1,6 +1,6 @@
 "use client"
 
-import { Github, Linkedin, Mail, SendHorizontal } from "lucide-react"
+import { Github, Linkedin, Mail, SendHorizontal, X } from "lucide-react"
 import { IconButton } from "./ui/button"
 import { Button } from "./ui/moving-border"
 import { GithubUrl, LinkedInUrl, profilePicture, resumeLink } from "@/constants"
@@ -8,11 +8,11 @@ import { GithubUrl, LinkedInUrl, profilePicture, resumeLink } from "@/constants"
 import {
     Dialog,
     DialogContent,
-    DialogDescription,
     DialogHeader,
     DialogTitle,
     DialogTrigger,
     DialogFooter,
+    DialogClose,
 } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -68,8 +68,11 @@ const ContactDialog = () => {
                             <Textarea placeholder="Type your message here." id="message" onChange={(e) => setMessage(e.target.value)} />
                         </div>
                     </div>
-                    <DialogFooter>
-                        <IconButton type="submit">Send Mail<SendHorizontal className="w-4 h-4 ml-2" /></IconButton>
+                    <DialogFooter className="flex gap-2">
+                        <DialogClose asChild>
+                            <IconButton type="button" variant="secondary">Close</IconButton>
+                        </DialogClose>
+                        <IconButton type="submit">Send Mail<SendHorizontal className="w-4 h-4 ml-1" /></IconButton>
                     </DialogFooter>
                 </form>
             </DialogContent>
