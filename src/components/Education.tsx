@@ -1,27 +1,16 @@
-import { ArrowRight } from "lucide-react";
-import { Card } from "./ui/card";
-
 export const Education = () => {
   return (
     <div className="w-full space-y-4">
-      <span className="flex items-center gap-2 text-xl font-medium">
+      <span className="flex items-center gap-2 text-xl font-medium mb-6">
         Education
-        <ArrowRight />
       </span>
-      <Card className="flex items-center gap-4 p-4">
-        <img
-          src="/images/college-logo.png"
-          alt="college logo"
-          className="w-16 h-16"
-        />
+      <div className="flex items-center gap-2 opacity-80">
         <div className="w-full flex flex-col gap-2">
           <div className="flex items-center justify-between">
-            <span className="text-md font-semibold">
+            <span className="font-semibold">
               Graphic Era (Deemed to be University)
             </span>
-            <span className="text-md font-medium max-[480px]:hidden">
-              2022 - 2024
-            </span>
+            <span className="font-medium max-[480px]:hidden">2022 - 2024</span>
           </div>
           <div className="flex items-center justify-between">
             <span className="text-sm font-medium">
@@ -35,21 +24,14 @@ export const Education = () => {
             CGPA - 8.55
           </span>
         </div>
-      </Card>
-      <Card className="flex items-center gap-4 p-4">
-        <img
-          src="/images/college-logo.png"
-          alt="college logo"
-          className="w-16 h-16"
-        />
+      </div>
+      <div className="flex items-center gap-2 opacity-80">
         <div className="w-full flex flex-col gap-2">
           <div className="flex items-center justify-between">
-            <span className="text-md font-semibold">
+            <span className="font-semibold">
               Graphic Era (Deemed to be University)
             </span>
-            <span className="text-md font-medium max-[480px]:hidden">
-              2019 - 2022
-            </span>
+            <span className="font-medium max-[480px]:hidden">2019 - 2022</span>
           </div>
           <div className="flex items-center justify-between">
             <span className="text-sm font-medium">
@@ -63,7 +45,7 @@ export const Education = () => {
             CGPA - 8.61
           </span>
         </div>
-      </Card>
+      </div>
     </div>
   );
 };

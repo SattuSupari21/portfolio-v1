@@ -1,22 +1,15 @@
 "use client";
 
-import {
-  Github,
-  Linkedin,
-  Mail,
-  SendHorizontal,
-  Twitter,
-  X,
-} from "lucide-react";
+import { Mail, SendHorizontal } from "lucide-react";
 import { IconButton } from "./ui/button";
 import { Button } from "./ui/moving-border";
+
 import {
-  GithubUrl,
-  LinkedInUrl,
-  TwitterUrl,
-  profilePicture,
-  resumeLink,
-} from "@/constants";
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 import {
   Dialog,
@@ -33,6 +26,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { FormEvent, useState } from "react";
 import { SendMail } from "@/actions";
 import toast from "react-hot-toast";
+import { ModeToggle } from "./ModeToggle";
+import { usePathname } from "next/navigation";
+import { resumeLink } from "@/constants";
 
 const ContactDialog = () => {
   const [name, setName] = useState<string | null>(null);
@@ -117,47 +113,52 @@ const ContactDialog = () => {
 };
 
 export const Header = () => {
+  const pathName = usePathname();
+
   return (
-    <div className="w-full h-full flex items-center justify-between">
-      <div className="min-[480px]:mt-4 flex gap-4 items-center justify-center">
-        <img
-          src={profilePicture}
-          alt="profile picture"
-          className="inline-block size-[60px] max-[480px]:size-[48px] rounded-full"
-        />
-        <div className="max-[480px]:invisible">
-          <div className="font-medium">Satvik Chandra</div>
-          <div className="text-zinc-400">Developer</div>
-        </div>
+    <div className="w-full h-full flex items-center justify-between font-medium">
+      <div>
+        <a href="/" className="underline">
+          satvik
+        </a>
       </div>
-      <div className="flex gap-2 items-center">
-        <div className="space-x-2">
-          <ContactDialog />
-          <IconButton
-            variant={"outline"}
-            asChild
-            className="max-[480px]:hidden"
+
+      <div className="flex gap-4">
+        <div className="max-[480px]:invisible flex gap-6 items-center ">
+          <a
+            href={"/about"}
+            className={pathName === "/about" ? "text-primary" : ""}
           >
-            <a href={"/Satvik_s_Resume.pdf"} target="_blank">
-              Resume
-            </a>
-          </IconButton>
+            About
+          </a>
+          <a
+            href={"/projects"}
+            className={pathName === "/projects" ? "text-primary" : ""}
+          >
+            Projects
+          </a>
+          <a href={resumeLink} target="_blank">
+            Resume
+          </a>
         </div>
-        <IconButton variant={"outline"} size={"icon"} asChild>
-          <a href={GithubUrl} target="_blank">
-            <Github />
-          </a>
-        </IconButton>
-        <IconButton variant={"outline"} size={"icon"} asChild>
-          <a href={LinkedInUrl} target="_blank">
-            <Linkedin />
-          </a>
-        </IconButton>
-        <IconButton variant={"outline"} size={"icon"} asChild>
-          <a href={TwitterUrl} target="_blank">
-            <Twitter />
-          </a>
-        </IconButton>
+
+        <div className="flex items-center min-[480px]:hidden">
+          <DropdownMenu>
+            <DropdownMenuTrigger>Menu</DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuItem asChild>
+                <a href={"/about"}>About</a>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <a href={"/projects"}>Projects</a>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <a href={resumeLink}>Resume</a>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </div>
+        <ModeToggle />
       </div>
     </div>
   );

@@ -2,11 +2,12 @@ export const profilePicture =
   "https://res.cloudinary.com/dpnmetc7y/image/upload/v1712460910/portfoliov1-images/profile_pic.jpg";
 
 export const resumeLink =
-  "https://drive.google.com/file/d/1T9frXjIBnxcbdwJjUhosZUqzRIMzdDqm/view?usp=sharing";
+  "https://drive.google.com/file/d/1X1Txyv2rMO1hm7TUcgdBnKyYm89aaN-D/view?usp=drive_link";
 
 export const GithubUrl = "https://github.com/SattuSupari21";
 export const LinkedInUrl = "https://www.linkedin.com/in/satvik-chandra";
 export const TwitterUrl = "https://x.com/samtuwu";
+export const DiscordUrl = "https://discord.com/users/672023890494488587";
 
 export const projects = [
   {
@@ -55,7 +56,7 @@ export const projects = [
       "https://res.cloudinary.com/dpnmetc7y/image/upload/v1712460941/portfoliov1-images/limktree-home.png",
     title: "Limktree",
     about:
-      "Provides users with a centralized platform to share multiple links through a single customizable URL, similar to the popular Linktree service.",
+      "Provides users with a centralized platform to share multiple links through a single customizable URL.",
     sourceCode: "https://github.com/SattuSupari21/limktree",
     techStack: [
       "Next.js",

@@ -1,10 +1,24 @@
+import Links from "./Links";
+
 export const About = () => {
-    return (
-        <div className="w-full space-y-2">
-            <div className="flex flex-col gap-2">
-                <span className="font-semibold">About me</span>
-                <span className="text-justify">Hey, I'm Satvik, a developer from India with a passion for building applications that live on the Internet! In this portfolio, I'll be showcasing some of my most notable projects, including a brief description of the project.</span>
-            </div>
+  return (
+    <div className="w-full space-y-4">
+      <div className="flex flex-col gap-4">
+        <div className="flex items-center gap-2 text-4xl">
+          <img
+            src="/images/PepeHi.png"
+            alt="PepePray"
+            className="w-14 oject-cover"
+          />
+          <p> I'm Satvik</p>
         </div>
-    )
-}
+        <span className="opacity-80">
+          I am an aspiring developer who simply loves to build things. I love to
+          experiment with new technologies and programming languages, constantly
+          seeking to expand my knowledge and skills.
+        </span>
+      </div>
+      <Links />
+    </div>
+  );
+};
