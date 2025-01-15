@@ -2,7 +2,7 @@ export const profilePicture =
   "https://res.cloudinary.com/dpnmetc7y/image/upload/v1712460910/portfoliov1-images/profile_pic.jpg";
 
 export const resumeLink =
-  "https://drive.google.com/file/d/1X1Txyv2rMO1hm7TUcgdBnKyYm89aaN-D/view?usp=drive_link";
+  "https://drive.google.com/file/d/1ulQb3z3nZA4wFbL4D05mBrVxqKiCyvvM/view?usp=sharing";
 
 export const GithubUrl = "https://github.com/SattuSupari21";
 export const LinkedInUrl = "https://www.linkedin.com/in/satvik-chandra";
@@ -12,6 +12,26 @@ export const DiscordUrl = "https://discord.com/users/672023890494488587";
 export const projects = [
   {
     id: 1,
+    slug: "tsturbo",
+    image:
+      "https://res.cloudinary.com/dpnmetc7y/image/upload/v1736924610/portfoliov1-images/tsturbo-home.png",
+    title: "TsTurbo",
+    about:
+      "A high-performance web server from scratch with support for static file serving, HTTP range requests, and chunked transfer encoding.",
+    sourceCode: "https://github.com/SattuSupari21/tsturbo",
+    techStack: [
+      "Node.js",
+      "TypeScript",
+      "HTTP",
+      "File Handling",
+      "TCP Sockets",
+      "Asynchronous Programming",
+    ],
+    demoVideoUrl:
+      "https://res.cloudinary.com/dpnmetc7y/video/upload/v1736925748/portfoliov1-project-demos/tsturbo-demo.mp4",
+  },
+  {
+    id: 2,
     slug: "lb-py",
     image:
       "https://res.cloudinary.com/dpnmetc7y/image/upload/v1713358276/portfoliov1-images/lb-py-home.png",
@@ -30,7 +50,7 @@ export const projects = [
       "https://res.cloudinary.com/dpnmetc7y/video/upload/v1713358735/portfoliov1-project-demos/lb-py-demo.mp4",
   },
   {
-    id: 2,
+    id: 3,
     slug: "portfolio-v1",
     image:
       "https://res.cloudinary.com/dpnmetc7y/image/upload/v1713968155/portfoliov1-images/portfolio-v1-home.png",
@@ -50,7 +70,7 @@ export const projects = [
     demoVideoUrl: null,
   },
   {
-    id: 3,
+    id: 4,
     slug: "limktree",
     image:
       "https://res.cloudinary.com/dpnmetc7y/image/upload/v1712460941/portfoliov1-images/limktree-home.png",
@@ -74,7 +94,7 @@ export const projects = [
       "https://res.cloudinary.com/dpnmetc7y/video/upload/v1712386001/portfoliov1-project-demos/limktree-demo.mp4",
   },
   {
-    id: 4,
+    id: 5,
     slug: "shorty",
     image:
       "https://res.cloudinary.com/dpnmetc7y/image/upload/v1712460942/portfoliov1-images/shorty-home.png",
@@ -97,7 +117,7 @@ export const projects = [
       "https://res.cloudinary.com/dpnmetc7y/video/upload/v1712385277/portfoliov1-project-demos/shorty-demo.mp4",
   },
   {
-    id: 5,
+    id: 6,
     slug: "styled",
     image:
       "https://res.cloudinary.com/dpnmetc7y/image/upload/v1712460945/portfoliov1-images/styled-home.png",
