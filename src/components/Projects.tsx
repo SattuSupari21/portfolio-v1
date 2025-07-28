@@ -13,6 +13,7 @@ type ProjectType = {
   slug: string;
   image: string;
   title: string;
+  shortAbout?: string;
   about: string;
   sourceCode: string;
   techStack: string[];
@@ -29,7 +30,7 @@ const RenderProject = ({ project }: { project: ProjectType }) => {
       <div className="flex-1 flex flex-col justify-between p-1 gap-4">
         <div className="space-y-2">
           <p className="font-bold">{project.title}</p>
-          <p className="opacity-80 text-sm">{project.about}</p>
+          <p className="opacity-80 text-sm">{project.shortAbout}</p>
           <div className="flex flex-wrap gap-2 pt-2">
             {project.techStack.map((tech) => (
               <Badge
@@ -52,7 +53,7 @@ const RenderProject = ({ project }: { project: ProjectType }) => {
               <Github className="mr-2" /> Source Code
             </a>
           </IconButton>
-          <ArrowRight className="group-hover:-rotate-45 transition-transform" />
+          <ArrowRight className="-rotate-45 group-hover:-rotate-0 transition-transform" />
         </div>
       </div>
     </Card>

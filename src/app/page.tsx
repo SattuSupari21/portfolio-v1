@@ -4,6 +4,7 @@ import { Skills } from "@/components/Skills";
 import { Projects } from "@/components/Projects";
 import { Education } from "@/components/Education";
 import { Footer } from "@/components/Footer";
+import {Experience} from "@/components/Experience"
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <div className="w-full min-h-full flex flex-col p-2 max-[720px]:p-4 gap-12 max-[480px]:p-4 max-w-[720px] mb-6">
         <Header />
         <About />
+        <Experience />
         <Projects />
         <Skills />
         <Education />

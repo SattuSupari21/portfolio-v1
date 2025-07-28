@@ -61,7 +61,7 @@ const RenderProject = ({ project }: { project: ProjectType }) => {
               <Github className="mr-2" /> Source Code{" "}
             </a>
           </IconButton>
-          <ArrowRight className="group-hover:-rotate-45 transition-transform" />
+          <ArrowRight className="-rotate-45 group-hover:-rotate-0 transition-transform" />
         </div>
       </div>
     </Card>
@@ -79,7 +79,7 @@ export default function ProjectsPage() {
             Here are some of the projects I have worked on.
           </p>
         </div>
-        <div className="grid grid-cols-2 max-[480px]:grid-cols-1 gap-4">
+        <div className="grid grid-cols-2 max-[480px]:grid-cols-1 gap-6">
           {projects.map((project) => {
             return <RenderProject key={project.id} project={project} />;
           })}

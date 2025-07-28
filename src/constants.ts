@@ -16,6 +16,7 @@ export const projects = [
     image:
       "https://res.cloudinary.com/dpnmetc7y/image/upload/v1736924610/portfoliov1-images/tsturbo-home.png",
     title: "TsTurbo",
+    shortAbout: "a web server written from scratch in typescript.",
     about:
       "A high-performance web server from scratch with support for static file serving, HTTP range requests, and chunked transfer encoding.",
     sourceCode: "https://github.com/SattuSupari21/tsturbo",
@@ -36,6 +37,7 @@ export const projects = [
     image:
       "https://res.cloudinary.com/dpnmetc7y/image/upload/v1713358276/portfoliov1-images/lb-py-home.png",
     title: "lb.py",
+    shortAbout: "a multithreaded load balancer written in python.",
     about: "A Multithreaded Load Balancer written from scratch using Python.",
     sourceCode: "https://github.com/SattuSupari21/lb.py",
     techStack: [
@@ -55,6 +57,7 @@ export const projects = [
     image:
       "https://res.cloudinary.com/dpnmetc7y/image/upload/v1713968155/portfoliov1-images/portfolio-v1-home.png",
     title: "Portfolio Website",
+    shortAbout: "my personal portfolio.",
     about:
       "My personal portfolio website created using Next.js and deployed on Vercel.",
     sourceCode: "https://github.com/SattuSupari21/portfolio-v1",
@@ -75,6 +78,7 @@ export const projects = [
     image:
       "https://res.cloudinary.com/dpnmetc7y/image/upload/v1712460941/portfoliov1-images/limktree-home.png",
     title: "Limktree",
+    shortAbout: "a centralized platform to share links.",
     about:
       "Provides users with a centralized platform to share multiple links through a single customizable URL.",
     sourceCode: "https://github.com/SattuSupari21/limktree",
@@ -99,6 +103,7 @@ export const projects = [
     image:
       "https://res.cloudinary.com/dpnmetc7y/image/upload/v1712460942/portfoliov1-images/shorty-home.png",
     title: "Shorty",
+    shortAbout: "simple url shortner.",
     about:
       "A simple to use URL shortner created using Elysia.js with Bun runtime and Next.js.",
     sourceCode: "https://github.com/SattuSupari21/shorty",
@@ -122,6 +127,7 @@ export const projects = [
     image:
       "https://res.cloudinary.com/dpnmetc7y/image/upload/v1712460945/portfoliov1-images/styled-home.png",
     title: "Styled",
+    shortAbout: "full-stack e-commerce web app.",
     about:
       "Full-stack e-commerce web application created using Strapi CMS and Next.js.",
     sourceCode: "https://github.com/SattuSupari21/styled",
