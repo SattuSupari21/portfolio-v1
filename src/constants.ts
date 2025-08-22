@@ -145,3 +145,25 @@ export const projects = [
       "https://res.cloudinary.com/dpnmetc7y/video/upload/v1712459770/portfoliov1-project-demos/styled-demo.mp4",
   },
 ];
+
+export const WORK_EXPERIENCE: ExperienceItemType[] = [
+  {
+    id: "1",
+    companyName: "Indian Institute of Technology Bombay",
+    companyLogo: "https://upload.wikimedia.org/wikipedia/en/thumb/1/1d/Indian_Institute_of_Technology_Bombay_Logo.svg/1200px-Indian_Institute_of_Technology_Bombay_Logo.svg.png",
+    isCurrentEmployer: true,
+    positions: [
+      {
+        id: "1-1",
+        title: "Intern-Trainee",
+        employmentPeriod: "Jun 2025 - Present",
+        employmentType: "Internship",
+        description:
+        "Working with Geospatial analysis software and developing custom Python scripts for research scholers.",
+        icon: "code",
+        skills: ["Python", "PyQGIS", "Typescript", "React", "FastAPI"],
+        isExpanded: true,
+      }
+    ],
+  },
+];

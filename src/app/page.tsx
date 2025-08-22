@@ -9,7 +9,7 @@ import {Experience} from "@/components/Experience"
 export default function Home() {
   return (
     <main className="flex flex-col items-center">
-      <div className="w-full min-h-full flex flex-col p-2 max-[720px]:p-4 gap-12 max-[480px]:p-4 max-w-[720px] mb-6">
+      <div className="w-full min-h-full flex flex-col p-2 max-[720px]:p-4 gap-14 max-[480px]:p-4 max-w-[720px] mb-6">
         <Header />
         <About />
         <Experience />
