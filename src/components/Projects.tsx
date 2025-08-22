@@ -6,7 +6,7 @@ import { IconButton } from "./ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useRouter } from "next/navigation";
 
-import { projects } from "@/constants";
+import { top_projects } from "@/constants";
 
 type ProjectType = {
   id: number;
@@ -67,9 +67,14 @@ export const Projects = () => {
         Projects
       </span>
       <div className="flex flex-col mt-6 gap-4">
-        {projects.map((project) => {
+        {top_projects.map((project) => {
           return <RenderProject key={project.id} project={project} />;
         })}
+      </div>
+      <div className="w-full text-center mt-4">
+        <a href={"/projects"}>
+          <span className="opacity-70 hover:opacity-100 transition text-lgcenter">see all projects...</span>
+        </a>
       </div>
     </div>
   );

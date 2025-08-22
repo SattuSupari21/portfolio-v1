@@ -148,6 +148,99 @@ export const projects = [
   },
 ];
 
+export const top_projects = [
+  {
+    id: 1,
+    slug: "tsturbo",
+    image:
+    "https://res.cloudinary.com/dpnmetc7y/image/upload/v1736924610/portfoliov1-images/tsturbo-home.png",
+    title: "TsTurbo",
+    shortAbout: "a web server written from scratch in typescript.",
+    about:
+    "A high-performance web server from scratch with support for static file serving, HTTP range requests, and chunked transfer encoding.",
+    sourceCode: "https://github.com/SattuSupari21/tsturbo",
+    techStack: [
+      "Node.js",
+      "TypeScript",
+      "HTTP",
+      "File Handling",
+      "TCP Sockets",
+      "Asynchronous Programming",
+    ],
+    demoVideoUrl:
+    "https://res.cloudinary.com/dpnmetc7y/video/upload/v1736925748/portfoliov1-project-demos/tsturbo-demo.mp4",
+  },
+  {
+    id: 2,
+    slug: "lb-py",
+    image:
+    "https://res.cloudinary.com/dpnmetc7y/image/upload/v1713358276/portfoliov1-images/lb-py-home.png",
+    title: "lb.py",
+    shortAbout: "a multithreaded load balancer written in python.",
+    about: "A Multithreaded Load Balancer written from scratch using Python.",
+    sourceCode: "https://github.com/SattuSupari21/lb.py",
+    techStack: [
+      "Python",
+      "Socket",
+      "Network Programming",
+      "Multi-Threding",
+      "Operating Systems",
+      "Algorithms",
+    ],
+    demoVideoUrl:
+    "https://res.cloudinary.com/dpnmetc7y/video/upload/v1713358735/portfoliov1-project-demos/lb-py-demo.mp4",
+  },
+  {
+    id: 3,
+    slug: "limktree",
+    image:
+    "https://res.cloudinary.com/dpnmetc7y/image/upload/v1712460941/portfoliov1-images/limktree-home.png",
+    title: "Limktree",
+    shortAbout: "a centralized platform to share links.",
+    about:
+    "Provides users with a centralized platform to share multiple links through a single customizable URL.",
+    sourceCode: "https://github.com/SattuSupari21/limktree",
+    techStack: [
+      "Next.js",
+      "Prisma",
+      "PostgreSQL",
+      "Cloudinary",
+      "Axios",
+      "JWT",
+      "Recoil",
+      "ZOD",
+      "Next UI",
+      "Typescript",
+    ],
+    demoVideoUrl:
+    "https://res.cloudinary.com/dpnmetc7y/video/upload/v1712386001/portfoliov1-project-demos/limktree-demo.mp4",
+  },
+  {
+    id: 4,
+    slug: "shorty",
+    image:
+    "https://res.cloudinary.com/dpnmetc7y/image/upload/v1712460942/portfoliov1-images/shorty-home.png",
+    title: "Shorty",
+    shortAbout: "simple url shortner.",
+    about:
+    "A simple to use URL shortner created using Elysia.js with Bun runtime and Next.js.",
+    sourceCode: "https://github.com/SattuSupari21/shorty",
+    techStack: [
+      "Elysia.js",
+      "Next.js",
+      "Prisma",
+      "PostgreSQL",
+      "Axios",
+      "JWT",
+      "Recoil",
+      "Radix UI",
+      "Typescript",
+    ],
+    demoVideoUrl:
+    "https://res.cloudinary.com/dpnmetc7y/video/upload/v1712385277/portfoliov1-project-demos/shorty-demo.mp4",
+  },
+];
+
 type ExperiencePositionIconType = "design" | "code" | "business" | "education";
 
 type ExperiencePositionItemType = {
@@ -195,7 +288,7 @@ export const WORK_EXPERIENCE: ExperienceItemType[] = [
         employmentPeriod: "Jun 2025 - Present",
         employmentType: "Internship",
         description:
-        "Working with Geospatial analysis software and developing custom Python scripts for research scholers.",
+        "Working with Geospatial analysis software and developing custom Python scripts for research scholars.",
         icon: "code",
         skills: ["Python", "PyQGIS", "Typescript", "React", "FastAPI"],
         isExpanded: true,
