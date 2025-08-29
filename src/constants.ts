@@ -155,7 +155,7 @@ export const top_projects = [
     image:
     "https://res.cloudinary.com/dpnmetc7y/image/upload/v1736924610/portfoliov1-images/tsturbo-home.png",
     title: "TsTurbo",
-    shortAbout: "a web server written from scratch in typescript.",
+    shortAbout: "web server written from scratch in typescript.",
     about:
     "A high-performance web server from scratch with support for static file serving, HTTP range requests, and chunked transfer encoding.",
     sourceCode: "https://github.com/SattuSupari21/tsturbo",
@@ -176,8 +176,8 @@ export const top_projects = [
     image:
     "https://res.cloudinary.com/dpnmetc7y/image/upload/v1713358276/portfoliov1-images/lb-py-home.png",
     title: "lb.py",
-    shortAbout: "a multithreaded load balancer written in python.",
-    about: "A Multithreaded Load Balancer written from scratch using Python.",
+    shortAbout: "multithreaded load balancer written in python.",
+    about: "A ultithreaded Load Balancer written from scratch using Python.",
     sourceCode: "https://github.com/SattuSupari21/lb.py",
     techStack: [
       "Python",
@@ -196,7 +196,7 @@ export const top_projects = [
     image:
     "https://res.cloudinary.com/dpnmetc7y/image/upload/v1712460941/portfoliov1-images/limktree-home.png",
     title: "Limktree",
-    shortAbout: "a centralized platform to share links.",
+    shortAbout: "centralized platform to share links.",
     about:
     "Provides users with a centralized platform to share multiple links through a single customizable URL.",
     sourceCode: "https://github.com/SattuSupari21/limktree",

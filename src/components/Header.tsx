@@ -129,16 +129,16 @@ export const Header = () => {
             href={"/about"}
             className={pathName === "/about" ? "text-primary" : ""}
           >
-            About
+            about
           </a>
           <a
             href={"/projects"}
             className={pathName === "/projects" ? "text-primary" : ""}
           >
-            Projects
+            projects
           </a>
           <a href={resumeLink} target="_blank">
-            Resume
+            resume
           </a>
         </div>
 
@@ -147,13 +147,13 @@ export const Header = () => {
             <DropdownMenuTrigger>Menu</DropdownMenuTrigger>
             <DropdownMenuContent>
               <DropdownMenuItem asChild>
-                <a href={"/about"}>About</a>
+                <a href={"/about"}>about</a>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <a href={"/projects"}>Projects</a>
+                <a href={"/projects"}>projects</a>
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <a href={resumeLink}>Resume</a>
+                <a href={resumeLink}>resume</a>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>

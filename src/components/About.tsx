@@ -12,7 +12,7 @@ export const About = () => {
           />
           <p> I'm Satvik</p>
         </div>
-        <span className="opacity-80">
+        <span className="opacity-80 leading-relaxed">
           I am an aspiring developer who simply loves to build things. I love to
           experiment with new technologies and programming languages, constantly
           seeking to expand my knowledge and skills.

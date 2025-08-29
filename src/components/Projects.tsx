@@ -23,15 +23,15 @@ type ProjectType = {
 const RenderProject = ({ project }: { project: ProjectType }) => {
   const router = useRouter();
   return (
-    <Card
-      className="group p-2 cursor-pointer hover:bg-accent transition"
+    <div
+      className="group relative flex cursor-pointer flex-row items-center justify-between rounded-md duration-300 hover:before:absolute hover:before:-inset-2.5 hover:before:rounded-md hover:before:bg-secondary/20 hover:before:content-['']"
       onClick={() => router.push(`/project/${project.slug}`)}
     >
-      <div className="flex-1 flex flex-col justify-between p-1 gap-4">
+      <div className="w-full flex-1 flex flex-row items-center justify-between">
         <div className="space-y-2">
           <p className="font-bold">{project.title}</p>
           <p className="opacity-80 text-sm">{project.shortAbout}</p>
-          <div className="flex flex-wrap gap-2 pt-2">
+          {/* <div className="flex flex-wrap gap-2 pt-2">
             {project.techStack.map((tech) => (
               <Badge
                 key={project.id}
@@ -41,9 +41,10 @@ const RenderProject = ({ project }: { project: ProjectType }) => {
                 {tech}
               </Badge>
             ))}
-          </div>
+          </div> */}
         </div>
-        <div className="flex items-center justify-between">
+        <ArrowRight className="-rotate-45 group-hover:-rotate-0 transition-transform text-sm" />
+        {/* <div className="flex items-center justify-between">
           <IconButton
             variant={"outline"}
             asChild
@@ -53,10 +54,9 @@ const RenderProject = ({ project }: { project: ProjectType }) => {
               <Github className="mr-2" /> Source Code
             </a>
           </IconButton>
-          <ArrowRight className="-rotate-45 group-hover:-rotate-0 transition-transform" />
-        </div>
+        </div> */}
       </div>
-    </Card>
+    </div>
   );
 };
 
@@ -66,7 +66,7 @@ export const Projects = () => {
       <span className="flex items-center gap-2 text-xl font-medium">
         Projects
       </span>
-      <div className="flex flex-col mt-6 gap-4">
+      <div className="flex flex-col mt-6 gap-6">
         {top_projects.map((project) => {
           return <RenderProject key={project.id} project={project} />;
         })}
