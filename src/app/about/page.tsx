@@ -23,12 +23,12 @@ export default function AboutPage() {
           <div className="grid grid-cols-3 max-[480px]:grid-cols-2 text-lg gap-2">
             <p className="opacity-80">whoami</p>
             <div className="col-span-2 space-y-4">
-              <p>
+              <p className='leading-relaxed'>
                 Hi, I'm Satvik Chandra, from Dehradun, Uttarakhand. I have been
                 coding for around 2 years. I specialize in full-stack web
                 development.
               </p>
-              <p>
+              <p className='leading-relaxed'>
                 When I'm not at my desk, I am probably playing video games,
                 lifting weights, or listening to music.
               </p>

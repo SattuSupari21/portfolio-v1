@@ -13,6 +13,37 @@ export const DiscordUrl = "https://discord.com/users/672023890494488587";
 
 export const projects = [
   {
+    id: 0,
+    slug: "streamforge",
+    image:
+      "https://res.cloudinary.com/dpnmetc7y/image/upload/v1756654041/portfoliov1-images/streamforge_abg5yr.png",
+    title: "streamforge",
+    shortAbout: "",
+    about:
+      "A scalable, production-grade backend for secure, adaptive video streaming, designed for modern web platforms and developer teams.",
+    sourceCode: "https://github.com/SattuSupari21/streamforge",
+    techStack: [
+      "Bun",
+      "Express.ts",
+      "TypeScript",
+      "Nginx",
+      "PostgreSQL",
+      "Redis",
+      "Pino",
+      "Docker",
+      "Zod",
+      "MinIO",
+      "RabbitMQ",
+      "FFmpeg",
+      "Zod",
+      "JWT",
+      "Makefile"
+    ],
+    demoVideoUrl:
+      "https://res.cloudinary.com/dpnmetc7y/video/upload/v1756653129/portfoliov1-project-demos/streamforge-demo.mp4"
+  },
+
+  {
     id: 1,
     slug: "tsturbo",
     image:
@@ -149,6 +180,36 @@ export const projects = [
 ];
 
 export const top_projects = [
+  {
+    id: 0,
+    slug: "streamforge",
+    image:
+      "https://res.cloudinary.com/dpnmetc7y/image/upload/v1756654041/portfoliov1-images/streamforge_abg5yr.png",
+    title: "streamforge",
+    shortAbout: "scalable, production-grade backend for adaptive video streaming",
+    about:
+      "A scalable, production-grade backend for secure, adaptive video streaming, designed for modern web platforms and developer teams.",
+    sourceCode: "https://github.com/SattuSupari21/streamforge",
+    techStack: [
+      "Bun",
+      "Express.ts",
+      "TypeScript",
+      "Nginx",
+      "PostgreSQL",
+      "Redis",
+      "Pino",
+      "Docker",
+      "Zod",
+      "MinIO",
+      "RabbitMQ",
+      "FFmpeg",
+      "Zod",
+      "JWT",
+      "Makefile"
+    ],
+    demoVideoUrl:
+      "https://res.cloudinary.com/dpnmetc7y/video/upload/v1756653129/portfoliov1-project-demos/streamforge-demo.mp4"
+  },
   {
     id: 1,
     slug: "tsturbo",
@@ -291,7 +352,7 @@ export const WORK_EXPERIENCE: ExperienceItemType[] = [
         "Working with Geospatial analysis software and developing custom Python scripts for research scholars.",
         icon: "code",
         skills: ["Python", "PyQGIS", "Typescript", "React", "FastAPI"],
-        isExpanded: true,
+        isExpanded: false,
       }
     ],
   },
