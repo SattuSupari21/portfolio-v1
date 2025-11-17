@@ -1,7 +1,7 @@
 export const profilePicture =
   "https://res.cloudinary.com/dpnmetc7y/image/upload/v1712460910/portfoliov1-images/profile_pic.jpg";
 
-export const resumeLink = "/resume/Satvik_Chandra.pdf"
+export const resumeLink = "/resume/Satvik_Chandra.pdf";
 
 export const resumeLinkDrive =
   "https://drive.google.com/file/d/1ulQb3z3nZA4wFbL4D05mBrVxqKiCyvvM/view?usp=sharing";
@@ -37,10 +37,10 @@ export const projects = [
       "FFmpeg",
       "Zod",
       "JWT",
-      "Makefile"
+      "Makefile",
     ],
     demoVideoUrl:
-      "https://res.cloudinary.com/dpnmetc7y/video/upload/v1756653129/portfoliov1-project-demos/streamforge-demo.mp4"
+      "https://res.cloudinary.com/dpnmetc7y/video/upload/v1756653129/portfoliov1-project-demos/streamforge-demo.mp4",
   },
 
   {
@@ -186,7 +186,8 @@ export const top_projects = [
     image:
       "https://res.cloudinary.com/dpnmetc7y/image/upload/v1756654041/portfoliov1-images/streamforge_abg5yr.png",
     title: "streamforge",
-    shortAbout: "scalable, production-grade backend for adaptive video streaming",
+    shortAbout:
+      "scalable, production-grade backend for adaptive video streaming",
     about:
       "A scalable, production-grade backend for secure, adaptive video streaming, designed for modern web platforms and developer teams.",
     sourceCode: "https://github.com/SattuSupari21/streamforge",
@@ -205,20 +206,20 @@ export const top_projects = [
       "FFmpeg",
       "Zod",
       "JWT",
-      "Makefile"
+      "Makefile",
     ],
     demoVideoUrl:
-      "https://res.cloudinary.com/dpnmetc7y/video/upload/v1756653129/portfoliov1-project-demos/streamforge-demo.mp4"
+      "https://res.cloudinary.com/dpnmetc7y/video/upload/v1756653129/portfoliov1-project-demos/streamforge-demo.mp4",
   },
   {
     id: 1,
     slug: "tsturbo",
     image:
-    "https://res.cloudinary.com/dpnmetc7y/image/upload/v1736924610/portfoliov1-images/tsturbo-home.png",
+      "https://res.cloudinary.com/dpnmetc7y/image/upload/v1736924610/portfoliov1-images/tsturbo-home.png",
     title: "TsTurbo",
     shortAbout: "web server written from scratch in typescript.",
     about:
-    "A high-performance web server from scratch with support for static file serving, HTTP range requests, and chunked transfer encoding.",
+      "A high-performance web server from scratch with support for static file serving, HTTP range requests, and chunked transfer encoding.",
     sourceCode: "https://github.com/SattuSupari21/tsturbo",
     techStack: [
       "Node.js",
@@ -229,13 +230,13 @@ export const top_projects = [
       "Asynchronous Programming",
     ],
     demoVideoUrl:
-    "https://res.cloudinary.com/dpnmetc7y/video/upload/v1736925748/portfoliov1-project-demos/tsturbo-demo.mp4",
+      "https://res.cloudinary.com/dpnmetc7y/video/upload/v1736925748/portfoliov1-project-demos/tsturbo-demo.mp4",
   },
   {
     id: 2,
     slug: "lb-py",
     image:
-    "https://res.cloudinary.com/dpnmetc7y/image/upload/v1713358276/portfoliov1-images/lb-py-home.png",
+      "https://res.cloudinary.com/dpnmetc7y/image/upload/v1713358276/portfoliov1-images/lb-py-home.png",
     title: "lb.py",
     shortAbout: "multithreaded load balancer written in python.",
     about: "A ultithreaded Load Balancer written from scratch using Python.",
@@ -249,17 +250,17 @@ export const top_projects = [
       "Algorithms",
     ],
     demoVideoUrl:
-    "https://res.cloudinary.com/dpnmetc7y/video/upload/v1713358735/portfoliov1-project-demos/lb-py-demo.mp4",
+      "https://res.cloudinary.com/dpnmetc7y/video/upload/v1713358735/portfoliov1-project-demos/lb-py-demo.mp4",
   },
   {
     id: 3,
     slug: "limktree",
     image:
-    "https://res.cloudinary.com/dpnmetc7y/image/upload/v1712460941/portfoliov1-images/limktree-home.png",
+      "https://res.cloudinary.com/dpnmetc7y/image/upload/v1712460941/portfoliov1-images/limktree-home.png",
     title: "Limktree",
     shortAbout: "centralized platform to share links.",
     about:
-    "Provides users with a centralized platform to share multiple links through a single customizable URL.",
+      "Provides users with a centralized platform to share multiple links through a single customizable URL.",
     sourceCode: "https://github.com/SattuSupari21/limktree",
     techStack: [
       "Next.js",
@@ -274,17 +275,17 @@ export const top_projects = [
       "Typescript",
     ],
     demoVideoUrl:
-    "https://res.cloudinary.com/dpnmetc7y/video/upload/v1712386001/portfoliov1-project-demos/limktree-demo.mp4",
+      "https://res.cloudinary.com/dpnmetc7y/video/upload/v1712386001/portfoliov1-project-demos/limktree-demo.mp4",
   },
   {
     id: 4,
     slug: "shorty",
     image:
-    "https://res.cloudinary.com/dpnmetc7y/image/upload/v1712460942/portfoliov1-images/shorty-home.png",
+      "https://res.cloudinary.com/dpnmetc7y/image/upload/v1712460942/portfoliov1-images/shorty-home.png",
     title: "Shorty",
     shortAbout: "simple url shortner.",
     about:
-    "A simple to use URL shortner created using Elysia.js with Bun runtime and Next.js.",
+      "A simple to use URL shortner created using Elysia.js with Bun runtime and Next.js.",
     sourceCode: "https://github.com/SattuSupari21/shorty",
     techStack: [
       "Elysia.js",
@@ -298,7 +299,7 @@ export const top_projects = [
       "Typescript",
     ],
     demoVideoUrl:
-    "https://res.cloudinary.com/dpnmetc7y/video/upload/v1712385277/portfoliov1-project-demos/shorty-demo.mp4",
+      "https://res.cloudinary.com/dpnmetc7y/video/upload/v1712385277/portfoliov1-project-demos/shorty-demo.mp4",
   },
 ];
 
@@ -340,20 +341,48 @@ export const WORK_EXPERIENCE: ExperienceItemType[] = [
   {
     id: "1",
     companyName: "Indian Institute of Technology Bombay",
-    companyLogo: "https://upload.wikimedia.org/wikipedia/en/thumb/1/1d/Indian_Institute_of_Technology_Bombay_Logo.svg/1200px-Indian_Institute_of_Technology_Bombay_Logo.svg.png",
+    companyLogo:
+      "https://upload.wikimedia.org/wikipedia/en/thumb/1/1d/Indian_Institute_of_Technology_Bombay_Logo.svg/1200px-Indian_Institute_of_Technology_Bombay_Logo.svg.png",
+    isCurrentEmployer: true,
+    positions: [
+      {
+        id: "1-1",
+        title: "Project Associate",
+        employmentPeriod: "September 2025 - Present",
+        employmentType: "Full Time",
+        description:
+          "Developing full-stack applications and PyQGIS processing toolbox scripts for Geospatial analysis.",
+        icon: "code",
+        skills: [
+          "Typescript",
+          "React",
+          "FastAPI",
+          "Next.js",
+          "Python",
+          "PyQGIS",
+        ],
+        isExpanded: false,
+      },
+    ],
+  },
+  {
+    id: "2",
+    companyName: "Indian Institute of Technology Bombay",
+    companyLogo:
+      "https://upload.wikimedia.org/wikipedia/en/thumb/1/1d/Indian_Institute_of_Technology_Bombay_Logo.svg/1200px-Indian_Institute_of_Technology_Bombay_Logo.svg.png",
     isCurrentEmployer: true,
     positions: [
       {
         id: "1-1",
         title: "Intern-Trainee",
-        employmentPeriod: "Jun 2025 - Present",
+        employmentPeriod: "Jun 2025 - September 2025",
         employmentType: "Internship",
         description:
-        "Working with Geospatial analysis software and developing custom Python scripts for research scholars.",
+          "Working with Geospatial analysis software and developing custom Python scripts for research scholars.",
         icon: "code",
         skills: ["Python", "PyQGIS", "Typescript", "React", "FastAPI"],
         isExpanded: false,
-      }
+      },
     ],
   },
 ];
