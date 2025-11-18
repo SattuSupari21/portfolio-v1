@@ -1,7 +1,7 @@
 export const profilePicture =
   "https://res.cloudinary.com/dpnmetc7y/image/upload/v1712460910/portfoliov1-images/profile_pic.jpg";
 
-export const resumeLink = "/resume/Satvik_Chandra.pdf";
+export const resumeLink = "/resume/Satvik Chandra.pdf";
 
 export const resumeLinkDrive =
   "https://drive.google.com/file/d/1ulQb3z3nZA4wFbL4D05mBrVxqKiCyvvM/view?usp=sharing";
